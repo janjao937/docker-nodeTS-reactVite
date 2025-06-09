@@ -1,0 +1,11 @@
+-check MySQL ในเครื่อง
+1. netstat -ano | findstr :3306
+-close MySQL ในเครื่อง
+1. run cmd as admin
+2. net stop MySQL80
+ใช้ db-data เพื่อเก็บข้อมูล MySQL ที่ /var/lib/mysql ซึ่งเป็นโฟลเดอร์ที่ MySQL ใช้จัดเก็บข้อมูลจริง
+
+เมื่อคอนเทนเนอร์ปิด ข้อมูลใน Volume จะ ไม่ถูกลบ และจะยังอยู่ในการใช้งานครั้งถัดไป
+ใช้ driver: local เพื่อใช้พื้นที่จัดเก็บบนเครื่องโดยตรง
+-ลบ Volume (ถ้าไม่ใช้แล้ว):
+docker volume rm db-data

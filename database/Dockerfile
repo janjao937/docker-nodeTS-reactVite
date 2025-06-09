@@ -1,0 +1,12 @@
+FROM mysql:8.0
+
+# กำหนด environment variables
+ENV MYSQL_ROOT_PASSWORD=rootpassword
+ENV MYSQL_DATABASE=mydb
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=password
+
+# คัดลอกไฟล์ตั้งค่าเริ่มต้น
+COPY init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306
