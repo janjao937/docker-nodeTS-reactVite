@@ -9,3 +9,7 @@
 ใช้ driver: local เพื่อใช้พื้นที่จัดเก็บบนเครื่องโดยตรง
 -ลบ Volume (ถ้าไม่ใช้แล้ว):
 docker volume rm db-data
+
+
+-run database only 
+docker compose up -d database
