@@ -13,3 +13,6 @@ docker volume rm db-data
 
 -run database only 
 docker compose up -d database
+
+-ถ้าต้องการลบข้อมูลทุก volume ใน Docker ให้ใช้คำสั่งนี้
+docker volume prune -f
